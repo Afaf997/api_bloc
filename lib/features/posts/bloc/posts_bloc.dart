@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
+import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:rest_api/features/posts/model/data_ui_model.dart';
 
@@ -25,8 +25,8 @@ try {
    List result = jsonDecode(response.body);
 
   for(int i=0; i<result.length; i++){
-    PostResponse post =PostResponse.fromJson(result[i] as Map<String,dynamic>);
-    posts.add(post);
+     PostResponse post =PostResponse.fromJson(result[i] as Map<String,dynamic>);
+     posts.add(post);
   }
    print(posts);}
 catch(e){
