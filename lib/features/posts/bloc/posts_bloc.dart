@@ -31,6 +31,7 @@ try {
    print(posts);}
 catch(e){
   log(e.toString() as num);
+  //
 }
   
   }
